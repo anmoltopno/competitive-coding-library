@@ -1,0 +1,27 @@
+lli dp[5009][5009];
+lli dpfac[5009];
+
+lli nck(lli n, lli k){
+    if(k==0) return 1;
+    if(n==k) return 1;
+    if(dp[n][k]!=-1){
+        return dp[n][k];
+    }
+    else{
+       return dp[n][k] = (nck(n-1,k) + nck(n-1,k-1))%998244353LL;
+    }
+}
+
+lli fac(lli r){
+    if(r==0) return 1;
+    if(r==1) return 1;
+    if(dpfac[r]!=-1){
+        return dpfac[r];
+    }
+    else{
+        return dpfac[r] = (r*fac(r-1))%998244353;
+    }
+}
+
+//Set(dp,-1);
+//Set(dpfac,-1);
