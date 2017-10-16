@@ -74,7 +74,7 @@ int main(){
     for(int i=0; i<nv-1; i++){
         int u,v;
         cin>>u>>v;
-        //graph in 1 indexed
+        //input graph in 1 indexed
         u--;
         v--;
         graph[u].push_back(v);
@@ -83,8 +83,8 @@ int main(){
 
     dfs(0,0);
     
-    for(int j=0; j<nv; j++)
     for(int i=0; i<LG; i++){
+    for(int j=0; j<nv; j++)
         if(p[j][i]!=-1){
             p[j][i+1] = p[p[j][i]][i];        
         }
