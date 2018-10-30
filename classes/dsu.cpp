@@ -1,3 +1,5 @@
+//union and disjoint data structure
+
 class UnionFind { 
 	private: 
 	  vector<int> p, rank;
