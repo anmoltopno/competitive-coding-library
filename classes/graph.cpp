@@ -1,3 +1,4 @@
+#graph template declaration
 template <typename T>
 class graph {
   public:
